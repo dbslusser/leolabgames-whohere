@@ -352,7 +352,7 @@ form .row:first-child .floating-label-form-group {
 .btn-default:focus {
   background-color: yellow;
   border: 1px solid yellow;
-  color: white;
+  color: black;
 }
 ::-moz-selection {
   color: white;
