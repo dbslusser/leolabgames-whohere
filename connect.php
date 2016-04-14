@@ -47,47 +47,7 @@
 
 </head>
 
-<?php //include("card_submit.php"); ?>
-<?
-if( $_POST )
-{
-    $con = mysql_connect("localhost","leolab5_test","test123");
-
-    if (!$con)
-    {
-        die('Could not connect: ' . mysql_error());
-    }
-
-    mysql_select_db("comments", $con);
-
-    $users_name = $_POST['name'];
-    $users_email = $_POST['email'];
-    $users_website = $_POST['website'];
-    $users_comment = $_POST['comment'];
-
-    $users_name = mysql_real_escape_string($users_name);
-    $users_email = mysql_real_escape_string($users_email);
-    $users_website = mysql_real_escape_string($users_website);
-    $users_comment = mysql_real_escape_string($users_comment);
-
-    $articleid = $_GET['id'];
-    if( ! is_numeric($articleid) )
-        die('invalid article id');
-
-    $query = "
-  INSERT INTO `leolab5_mysite`.`comments` (`id`, `name`, `email`, `website`,
-        `comment`, `timestamp`, `articleid`) VALUES (NULL, '$users_name',
-        '$users_email', '$users_website', '$users_comment',
-        CURRENT_TIMESTAMP, '$articleid');";
-
-    mysql_query($query);
-
-    echo "<h2>Thank you for your Comment!</h2>";
-
-    mysql_close($con);
-}
-?>
-
+<?php include("card_submit.php"); ?>
 
 
 <body class="background1">
@@ -103,36 +63,36 @@ if( $_POST )
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
-                    <form>
+                    <form method='post'>
                         <div class="form-group">
                             <label for="cardText">Your Card</label>
-                            <input type="text" required="true" class="form-control" id="id_input_card_text" placeholder="card text">
+                            <input type='text' class="form-control" name='card' id='card' placeholder="your card text" required="true"/><br />
                         </div>
                         <div class="form-group">
-                            <label for="userEmail">Email address</label>
-<!--                            <input type="email" class="form-control" id="id_user_email" placeholder="Email">-->
-                            <input type="text" class="form-control" id="id_user_email" placeholder="Email">
+                            <label for="email">Email Address</label>
+                            <input type='email' class="form-control" name='email' id='email' placeholder="your email (if you'd like updates)"/><br />
+                        </div>
+                        <div class="form-group">
+                            <label for="user">User reference</label>
+                            <input type='text' class="form-control" name='user' id='user' placeholder="how to reference you (if you'd like your reference on the card"/><br />
+                        </div>
+                        <div class="form-group">
+                            <label for="reference">Ok to reference</label>
+                                <input type='hidden' class="form-control" name='reference_ok' id='reference_ok' value="0"/>
+                                <input type='checkbox' class="form-control" name='reference_ok' id='reference_ok' value="1" align="left"/>
+                        </div>
 
-                        </div>
-                        <div class="form-group">
-                            <label for="submittedBy">Submitted by</label>
-                            <input type="text" class="form-control" id="id_submitted_by" placeholder="how to refer you">
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox"> ok to reference
-                            </label>
-                        </div>
-                        <button type="submit" class="btn btn-default">Submit</button>
+                        <br/>
+                        <button type="submit" value="submit" class="btn btn-default">Submit</button>
                     </form>
                 </div>
             </div>
         </div>
-        <br>
+
         <p class="wh-subtle">
-            ** email is optional. Feel free to add it if you'd like updates on future expantions and if your submission was used.
+            ** email is optional. Feel free to add it if you'd like updates on future expansions and if your submission was used.
             <br>
-            ** click 'ok to reference' if you'd like your credit for your submission. We may use it in a future expantion. If used, we'll reference you by your entry in the 'submitted by' box. Feel free to use your name, social handle, nickname, or however you'd like to see yourself in print. :)
+            ** click 'ok to reference' if you'd like your credit for your submission. We may use it in a future expansion. If used, we'll reference you by your entry in the 'submitted by' box. Feel free to use your name, social handle, nickname, or however you'd like to see yourself in print. :)
         </p>
     </div>
 

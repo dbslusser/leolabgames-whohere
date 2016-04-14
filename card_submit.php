@@ -1,19 +1,14 @@
 <?php
-ini_set('display_errors', 'On');
 error_reporting(E_ALL);
+ini_set('display_errors', '1');
 
 if( $_POST )
 {
-    echo "ths is a test";
-    $con = mysql_connect("localhost","leo","leoasd");
+    $con = mysqli_connect("localhost","leo","leo","test");
 
-    if (!$con)
-    {
-        echo "could not connect!!!";
-        die('Could not connect: ' . mysql_error());
+    if ($con->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
     }
-
-    mysql_select_db("user_cards", $con);
 
     $users_card_text = $_POST['card'];
     $users_email = $_POST['email'];
@@ -25,15 +20,15 @@ if( $_POST )
     $users_submitted_by = mysql_real_escape_string($users_submitted_by);
     $users_reference = mysql_real_escape_string($users_reference);
 
-    $query = "
-  INSERT INTO `test`.`user_cards` (`card`, `email`, `user`, `reference_ok`, `timestamp`)
-        VALUES ('$users_card_text', '$users_email', '$users_submitted_by', '$users_reference', CURRENT_TIMESTAMP);";
+    $query = "INSERT INTO `test`.`user_cards` (`id`, `card`, `email`, `user`, `reference_ok`, `timestamp`)
+        VALUES (NULL, '$users_card_text', '$users_email', '$users_submitted_by', '$users_reference', CURRENT_TIMESTAMP);";
 
-    mysql_query($query);
+    if ($con->query($query) === TRUE) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $con->error;
+    }
 
-    echo "<h2>Thank you for your Comment!</h2>";
-
-    mysql_close($con);
+    $con->close();
 }
-
 ?>

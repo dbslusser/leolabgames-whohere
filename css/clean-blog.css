@@ -418,6 +418,13 @@ body {
   color: #888888;
   font-family: verdana;
 }
+.wh-inline-title {
+  color: lightgoldenrodyellow;
+  font-family: verdana;
+  font-weight: bold;
+  background: none;
+}
+
 
 .wh-subtitle1 {
   font-size: larger;
@@ -443,7 +450,6 @@ body {
   border-style: inset;
   border-width: 1px;
 }
-
 .divider-100 {
   display: block;
   border-color: grey;
@@ -454,6 +460,7 @@ body {
   border-style: inset;
   border-width: 1px;
 }
+
 
 .background1 {
   background-color: #545454;
@@ -480,5 +487,41 @@ body {
 }
 .indent-10 {
   padding-left: 10em;
+}
+
+
+.margin-top { margin-top:20px; }
+.margin-bottom { margin-bottom:20px; }
+.margin-top-40 { margin-top: 40px; }
+.margin-bottom-40 { margin-bottom: 40px; }
+
+
+.wh-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  font-family: verdana, sans-serif;
+  background-color: #545454;
+  color: yellow;
+}
+.wh-navbar .navbar-brand {
+  font-weight: 800;
+}
+.wh-navbar .nav li a {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.wh-navbar .nav li a {
+color: #333333;
+padding: 20px;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  background-color: yellow;
+  color: black;
 }
 
