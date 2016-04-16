@@ -63,41 +63,61 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3">
-                    <form method='post'>
+                    <form method='post' id="id_cardForm">
                         <div class="form-group">
                             <label for="cardText">Your Card</label>
-                            <input type='text' class="form-control" name='card' id='card' placeholder="your card text" required="true"/><br />
+                            <input type='text' class="form-control wh-form-element" name='card' id='card' placeholder="your card text" required="true"/><br />
                         </div>
                         <div class="form-group">
                             <label for="email">Email Address</label>
-                            <input type='email' class="form-control" name='email' id='email' placeholder="your email (if you'd like updates)"/><br />
+                            <input type='email' class="form-control wh-form-element" name='email' id='email' placeholder="your email (if you'd like updates)"/><br />
                         </div>
                         <div class="form-group">
                             <label for="user">User reference</label>
-                            <input type='text' class="form-control" name='user' id='user' placeholder="how to reference you (if you'd like your reference on the card"/><br />
+                            <input type='text' class="form-control wh-form-element" name='user' id='user' placeholder="how to reference you (if you'd like your reference on the card)"/><br />
                         </div>
                         <div class="form-group">
                             <label for="reference">Ok to reference</label>
                                 <input type='hidden' class="form-control" name='reference_ok' id='reference_ok' value="0"/>
-                                <input type='checkbox' class="form-control" name='reference_ok' id='reference_ok' value="1" align="left"/>
+                                <input type='checkbox' class="form-control wh-form-element" name='reference_ok' id='reference_ok' value="1" align="left"/>
                         </div>
 
                         <br/>
-                        <button type="submit" value="submit" class="btn btn-default">Submit</button>
+                        <button type="submit" value="submit" class="btn btn-default wh-form-element">Submit</button>
                     </form>
                 </div>
             </div>
         </div>
 
-        <p class="wh-subtle">
+        <p class="wh-subtle margin-top-40"><br>
             ** email is optional. Feel free to add it if you'd like updates on future expansions and if your submission was used.
             <br>
-            ** click 'ok to reference' if you'd like your credit for your submission. We may use it in a future expansion. If used, we'll reference you by your entry in the 'submitted by' box. Feel free to use your name, social handle, nickname, or however you'd like to see yourself in print. :)
+            ** click 'ok to reference' if you'd like your credit for your submission. We may use it in a future expansion. If used, we'll reference you by your entry in the 'user reference' box. Feel free to use your name, social handle, nickname, or however you'd like to see yourself in print. :)
         </p>
     </div>
 
     <!-- footer -->
     <div id="id_footer"></div>
+
+
+    <!-- MODAL: results -->
+    <div class="modal fade" id="id_modalResults" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title wh-modal-title" id="id_modalResultsHeader">Submission Received</h4>
+                </div>
+                <div class="modal-body-scroll indent-1 wh-modal-body margin-top-20 margin-bottom-20" id="id_modalResultsBody" align="center">
+                    <img src="./media/images/thumbsUpEmoji.jpg" align="center" width="75%" height="75%">
+                    <br/>Thanks for sharing!
+                </div>
+                <div class="modal-footer">
+                    <button id="id_modalResultsClose" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 

@@ -490,8 +490,8 @@ body {
 }
 
 
-.margin-top { margin-top:20px; }
-.margin-bottom { margin-bottom:20px; }
+.margin-top-20 { margin-top:20px; }
+.margin-bottom-20 { margin-bottom:20px; }
 .margin-top-40 { margin-top: 40px; }
 .margin-bottom-40 { margin-bottom: 40px; }
 
@@ -525,3 +525,19 @@ padding: 20px;
   color: black;
 }
 
+.wh-form-element {
+  color: grey;
+  font-family: verdana;
+  font-weight: bold;
+  background: lightgoldenrodyellow;
+}
+
+.wh-modal-title {
+  font-family: verdana;
+  font-weight: bold;
+  color: black;
+}
+.wh-modal-body {
+  font-family: verdana;
+  color: black;
+}

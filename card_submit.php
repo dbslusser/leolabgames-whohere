@@ -25,6 +25,16 @@ if( $_POST )
 
     if ($con->query($query) === TRUE) {
         echo "New record created successfully";
+        ?>
+        <script language="javascript" type="text/javascript">
+            $(document).ready(function(){
+                $('#id_modalResults').modal('show');
+            });
+//            alert("done!");
+        </script>
+        <?php
+
+
     } else {
         echo "Error: " . $sql . "<br>" . $con->error;
     }
