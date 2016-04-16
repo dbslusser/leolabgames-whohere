@@ -10,18 +10,13 @@ if( $_POST )
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $users_card_text = $_POST['card'];
-    $users_email = $_POST['email'];
-    $users_submitted_by = $_POST['user'];
-    $users_reference = $_POST['reference_ok'];
-
-    $users_card_text = mysql_real_escape_string($users_card_text);
-    $users_email = mysql_real_escape_string($users_email);
-    $users_submitted_by = mysql_real_escape_string($users_submitted_by);
-    $users_reference = mysql_real_escape_string($users_reference);
+    $users_card_text = mysqli_real_escape_string($con, $_POST['card']);
+    $users_email = mysqli_real_escape_string($con, $_POST['email']);
+    $users_user = mysqli_real_escape_string($con, $_POST['user']);
+    $users_reference = mysqli_real_escape_string($con, $_POST['reference_ok']);
 
     $query = "INSERT INTO `test`.`user_cards` (`id`, `card`, `email`, `user`, `reference_ok`, `timestamp`)
-        VALUES (NULL, '$users_card_text', '$users_email', '$users_submitted_by', '$users_reference', CURRENT_TIMESTAMP);";
+        VALUES (NULL, '$users_card_text', '$users_email', '$users_user', '$users_reference', CURRENT_TIMESTAMP);";
 
     if ($con->query($query) === TRUE) {
         echo "New record created successfully";
@@ -30,7 +25,6 @@ if( $_POST )
             $(document).ready(function(){
                 $('#id_modalResults').modal('show');
             });
-//            alert("done!");
         </script>
         <?php
 

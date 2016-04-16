@@ -17,11 +17,6 @@
     <!-- Custom CSS -->
     <link href="css/clean-blog.css" rel="stylesheet">
 
-    <!-- Custom Fonts -->
-<!--    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">-->
-<!--    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>-->
-<!--    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>-->
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -58,33 +53,39 @@
 <br>
 <div class="container background1">
     <div class="site-heading">
-        <h2 style="color:yellow;">Have an <b>awesome</b> card idea? Submit it below!</h2>
+        <h2 style="color:yellow;" align="center">Have an <b>awesome</b> card idea? Submit it below!</h2>
         <br><br>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3">
-                    <form method='post' id="id_cardForm">
-                        <div class="form-group">
-                            <label for="cardText">Your Card</label>
-                            <input type='text' class="form-control wh-form-element" name='card' id='card' placeholder="your card text" required="true"/><br />
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type='email' class="form-control wh-form-element" name='email' id='email' placeholder="your email (if you'd like updates)"/><br />
-                        </div>
-                        <div class="form-group">
-                            <label for="user">User reference</label>
-                            <input type='text' class="form-control wh-form-element" name='user' id='user' placeholder="how to reference you (if you'd like your reference on the card)"/><br />
-                        </div>
-                        <div class="form-group">
-                            <label for="reference">Ok to reference</label>
-                                <input type='hidden' class="form-control" name='reference_ok' id='reference_ok' value="0"/>
-                                <input type='checkbox' class="form-control wh-form-element" name='reference_ok' id='reference_ok' value="1" align="left"/>
-                        </div>
 
-                        <br/>
-                        <button type="submit" value="submit" class="btn btn-default wh-form-element">Submit</button>
-                    </form>
+        <div class="container">
+            <div class="row">
+                <div class="Absolute-Center is-Responsive">
+                    <div id="logo-container"></div>
+                    <div class="col-sm-10 col-md-8 col-md-offset-2">
+                        <form method='post' id="id_cardForm">
+                            <div class="form-group input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+                                <input class="form-control wh-form-element" type='text' name='card' id='card' placeholder="your card text" required="true"/>
+                            </div>
+                            <div class="form-group input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                <input class="form-control wh-form-element" type='email' name='email' id='email' placeholder="your email (if you'd like updates)" required="true"/>
+                            </div>
+                            <div class="form-group input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input class="form-control wh-form-element" type='text' name='user' id='user' placeholder="how to reference you (if you'd like your reference on the card)" required="true"/>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type='hidden' name='reference_ok' id='reference_ok' value="0"/>
+                                    <input type="checkbox" name='reference_ok' id='reference_ok' value="1"> Okay to reference
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <br/>
+                                <button type="submit" value="submit" class="btn btn-default btn-block wh-form-element">Submit</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -95,6 +96,16 @@
             ** click 'ok to reference' if you'd like your credit for your submission. We may use it in a future expansion. If used, we'll reference you by your entry in the 'user reference' box. Feel free to use your name, social handle, nickname, or however you'd like to see yourself in print. :)
         </p>
     </div>
+
+
+
+
+
+
+
+
+
+
 
     <!-- footer -->
     <div id="id_footer"></div>
