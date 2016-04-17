@@ -4,10 +4,11 @@ ini_set('display_errors', '1');
 
 if( $_POST )
 {
-    $servername = "server";
-    $username = "user";
-    $password = "pwd";
-    $dbname = "db_name";
+    $servername = "localhost";
+    $username = "leo";
+    $password = "leo";
+    $dbname = "test";
+    $table = "user_cards";
 
     $con = mysqli_connect($servername, $username, $password, $dbname);
 
@@ -20,7 +21,7 @@ if( $_POST )
     $users_user = mysqli_real_escape_string($con, trim($_POST['user']));
     $users_reference = mysqli_real_escape_string($con, trim($_POST['reference_ok']));
 
-    $query = "INSERT INTO `test`.`user_cards` (`id`, `card`, `email`, `user`, `reference_ok`, `timestamp`)
+    $query = "INSERT INTO `$dbname`.`$table` (`id`, `card`, `email`, `user`, `reference_ok`, `timestamp`)
         VALUES (NULL, '$users_card_text', '$users_email', '$users_user', '$users_reference', CURRENT_TIMESTAMP);";
 
     if ($con->query($query) === TRUE) {
