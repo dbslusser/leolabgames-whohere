@@ -10,10 +10,10 @@ if( $_POST )
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $users_card_text = mysqli_real_escape_string($con, $_POST['card']);
-    $users_email = mysqli_real_escape_string($con, $_POST['email']);
-    $users_user = mysqli_real_escape_string($con, $_POST['user']);
-    $users_reference = mysqli_real_escape_string($con, $_POST['reference_ok']);
+    $users_card_text = mysqli_real_escape_string($con, trim($_POST['card']));
+    $users_email = mysqli_real_escape_string($con, trim($_POST['email']));
+    $users_user = mysqli_real_escape_string($con, trim($_POST['user']));
+    $users_reference = mysqli_real_escape_string($con, trim($_POST['reference_ok']));
 
     $query = "INSERT INTO `test`.`user_cards` (`id`, `card`, `email`, `user`, `reference_ok`, `timestamp`)
         VALUES (NULL, '$users_card_text', '$users_email', '$users_user', '$users_reference', CURRENT_TIMESTAMP);";

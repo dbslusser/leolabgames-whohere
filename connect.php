@@ -68,11 +68,11 @@
                             </div>
                             <div class="form-group input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                <input class="form-control wh-form-element" type='email' name='email' id='email' placeholder="your email (if you'd like updates)" required="true"/>
+                                <input class="form-control wh-form-element" type='email' name='email' id='email' placeholder="your email (if you'd like updates)"/>
                             </div>
                             <div class="form-group input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input class="form-control wh-form-element" type='text' name='user' id='user' placeholder="how to reference you (if you'd like your reference on the card)" required="true"/>
+                                <input class="form-control wh-form-element" type='text' name='user' id='user' placeholder="how to reference you (if you'd like your reference on the card)"/>
                             </div>
                             <div class="checkbox">
                                 <label>
