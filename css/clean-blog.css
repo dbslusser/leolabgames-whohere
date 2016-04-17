@@ -540,3 +540,11 @@ padding: 20px;
   font-family: verdana;
   color: black;
 }
+
+.wh-404-title{
+  font-family: verdana, sans-serif;
+  font-size: 120pt;
+  font-weight: bold;
+  text-align: center;
+  color: yellow;
+}
