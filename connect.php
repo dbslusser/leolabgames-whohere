@@ -10,6 +10,7 @@
     <meta name="author" content="">
 
     <title>WhoHere - connect</title>
+    <link rel="shortcut icon" type="image/x-icon" href="media/images/base-00.png" />
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">

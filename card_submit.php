@@ -4,7 +4,12 @@ ini_set('display_errors', '1');
 
 if( $_POST )
 {
-    $con = mysqli_connect("localhost","leo","leo","test");
+    $servername = "localhost";
+    $username = "leo";
+    $password = "leo";
+    $dbname = "test";
+
+    $con = mysqli_connect($servername, $username, $password, $dbname);
 
     if ($con->connect_error) {
         die("Connection failed: " . $conn->connect_error);
