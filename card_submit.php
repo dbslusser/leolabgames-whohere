@@ -4,10 +4,10 @@ ini_set('display_errors', '1');
 
 if( $_POST )
 {
-    $servername = "localhost";
-    $username = "leo";
-    $password = "leo";
-    $dbname = "test";
+    $servername = "server";
+    $username = "user";
+    $password = "pwd";
+    $dbname = "db_name";
 
     $con = mysqli_connect($servername, $username, $password, $dbname);
 
