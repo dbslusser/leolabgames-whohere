@@ -44,7 +44,7 @@
 
 </head>
 
-<?php include("card_submit.php"); ?>
+<?php include("email_submit.php"); ?>
 
 
 <body class="background1">
@@ -55,8 +55,8 @@
 <br>
 <div class="container background1">
     <div class="site-heading">
-        <h2 style="color:yellow;" align="center">Who Here has an <b>awesome</b> card idea?</h2>
-        <h3 align="center">Submit it below!</h3>
+        <h2 style="color:yellow;" align="center">Who Here is in the know?</h2>
+        <h3 align="center"> Join the WhoHere email lists for the latest news, expansions, specials, and more!</h3>
         <br><br>
 
         <div class="container">
@@ -66,22 +66,12 @@
                     <div class="col-sm-10 col-md-8 col-md-offset-2">
                         <form method='post' id="id_cardForm">
                             <div class="form-group input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                                <input class="form-control wh-form-element" type='text' name='card' id='card' placeholder="your card text" required="true"/>
-                            </div>
-                            <div class="form-group input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                <input class="form-control wh-form-element" type='email' name='email' id='email' placeholder="your email (if you'd like updates)"/>
+                                <input class="form-control wh-form-element" type='email' name='email' id='email' placeholder="your email"/>
                             </div>
                             <div class="form-group input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input class="form-control wh-form-element" type='text' name='user' id='user' placeholder="how to reference you (if you'd like your reference on the card)"/>
-                            </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input type='hidden' name='reference_ok' id='reference_ok' value="0"/>
-                                    <input type="checkbox" name='reference_ok' id='reference_ok' value="1"> Okay to reference
-                                </label>
+                                <input class="form-control wh-form-element" type='text' name='user' id='user' placeholder="your name"/>
                             </div>
                             <div class="form-group">
                                 <br/>
@@ -93,10 +83,8 @@
             </div>
         </div>
 
-        <p class="wh-subtle margin-top-40"><br>
-            ** email is optional. Feel free to add it if you'd like updates on future expansions and if your submission was used.
-            <br>
-            ** click 'ok to reference' if you'd like your credit for your submission. We may use it in a future expansion. If used, we'll reference you by your entry in the 'user reference' box. Feel free to use your name, social handle, nickname, or however you'd like to see yourself in print. :)
+        <p class="wh-subtle margin-top-40" align="center"><br>
+            ** email is for updates regarding WhoHere Games only. We will never spam you.
         </p>
     </div>
 
