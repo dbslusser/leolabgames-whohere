@@ -55,8 +55,8 @@
 <br>
 <div class="container background1">
     <div class="site-heading">
-        <h2 style="color:yellow;" align="center">Who Here is in the know?</h2>
-        <h3 align="center"> Join the WhoHere email lists for the latest news, expansions, specials, and more!</h3>
+        <h2 style="color:yellow;" align="center">Who Here... is in the know?</h2>
+        <h4 align="center"> Join the WhoHere email lists for the latest news, expansions, specials, and more!</h4>
         <br><br>
 
         <div class="container">
@@ -67,11 +67,11 @@
                         <form method='post' id="id_cardForm">
                             <div class="form-group input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                <input class="form-control wh-form-element" type='email' name='email' id='email' placeholder="your email"/>
+                                <input class="form-control wh-form-element" type='email' name='email' id='email' placeholder="your email" required="true"/>
                             </div>
                             <div class="form-group input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input class="form-control wh-form-element" type='text' name='user' id='user' placeholder="your name"/>
+                                <input class="form-control wh-form-element" type='text' name='user' id='user' placeholder="your name" required="true"/>
                             </div>
                             <div class="form-group">
                                 <br/>

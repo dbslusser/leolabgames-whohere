@@ -55,7 +55,7 @@
 <br>
 <div class="container background1">
     <div class="site-heading">
-        <h2 style="color:yellow;" align="center">Who Here has an <b>awesome</b> card idea?</h2>
+        <h2 style="color:yellow;" align="center">Who Here... has an <b>awesome</b> card idea?</h2>
         <h3 align="center">Submit it below!</h3>
         <br><br>
 
