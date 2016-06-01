@@ -71,13 +71,37 @@
             initialQuery = initialQuery.replace(" ", "");
             var queryTags = initialQuery.split(",");
             $('.social-feed-container').socialfeed({
-
-                // INSTAGRAM
-                instagram: {
+                // FACEBOOK
+                facebook: {
                     accounts: queryTags,
                     limit: 2,
+                    access_token: '150849908413827|a20e87978f1ac491a0c4a721c961b68c'
+                },
+                // GOOGLEPLUS
+                google: {
+                    accounts: queryTags,
+                    limit: 2,
+                    access_token: 'AIzaSyDAelFmJhg6BSUbSLe8UT7s-G53tL4_KRg'
+                },
+                // Twitter
+                twitter: {
+                    accounts: queryTags,
+                    limit: 2,
+                    consumer_key: 'qzRXgkI7enflNJH1lWFvujT2P', // make sure to have your app read-only
+                    consumer_secret: '8e7E7gHuTwyDHw9lGQFO73FcUwz9YozT37lEvZulMq8FXaPl8O', // make sure to have your app read-only
+                },
+                // VKONTAKTE
+                vk: {
+                    accounts: queryTags,
+                    limit: 2,
+                    source: 'all'
+                },
+                // INSTAGRAM
+                instagram: {
+                    accounts: ['@teslamotors','#teslamotors'],
+                    limit: 2,
                     client_id: 'aaddb80fdc0e4f398498ae46e15ca98c',
-                    access_token: ''
+                    access_token: '77f8b56402c14c9e89245dd79b19ae59'
                 },
 
                 // GENERAL SETTINGS
