@@ -438,12 +438,13 @@ body {
 
 .wh-subtle {
     font-size: small;
-    color: #888888;
+    color: dimgrey;
     font-family: verdana;
 }
 .wh-subtle-2 {
     font-size: 8px;
-    color: #888888;
+    /*color: #888888;*/
+    color: dimgrey;
     font-family: verdana;
 }
 .wh-inline-title {
@@ -491,13 +492,14 @@ body {
 
 
 .background1 {
-    background-color: #545454;
+    /*background-color: #545454;*/
+    background-color: grey;
     font-family: verdana;
 }
 
 body {
     font-family: verdana, sans-serif;
-    color: lightgrey;
+    color: lightgrey; /* this is the font color */
 }
 
 
@@ -522,7 +524,8 @@ body {
 .margin-bottom-20 { margin-bottom:20px; }
 .margin-top-40 { margin-top: 40px; }
 .margin-bottom-40 { margin-bottom: 40px; }
-
+.margin-top-80 { margin-top: 80px; }
+.margin-bottom-80 { margin-bottom: 80px; }
 
 .wh-navbar {
     position: fixed;
@@ -531,7 +534,8 @@ body {
     width: 100%;
     z-index: 3;
     font-family: verdana, sans-serif;
-    background-color: #545454;
+    /*background-color: #545454;*/
+    background-color: grey;
     color: yellow;
 }
 .wh-navbar .navbar-brand {
@@ -546,12 +550,15 @@ body {
 .wh-navbar .nav li a {
     color: lightgray;
     padding: 20px;
+    bottom: 0;
+    right: 0;
+    margin-bottom: -10px;
 }
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-    background-color: yellow;
-    color: black;
+    color: lightgoldenrodyellow;
 }
+
 
 .wh-form-element {
     color: black;
@@ -604,3 +611,15 @@ body {
     vertical-align: middle;
     float: none;
 }
+
+.wh-play-free {
+    width: 150px;
+    height: 150px;
+}
+
+.right {
+    float: right;
+    width: 300px;
+ }
+
+
