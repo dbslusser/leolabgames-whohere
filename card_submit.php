@@ -5,9 +5,9 @@ ini_set('display_errors', '1');
 if( $_POST )
 {
     $servername = "localhost";
-    $username = "leo";
-    $password = "leo";
-    $dbname = "test";
+    $username = "leolab5_usersub";
+    $password = "usersub123";
+    $dbname = "leolab5_whoHereUserSubmissions";
     $table = "user_cards";
 
     $con = mysqli_connect($servername, $username, $password, $dbname);
