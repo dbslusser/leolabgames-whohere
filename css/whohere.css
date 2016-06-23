@@ -59,7 +59,7 @@ a {
 }
 a:hover,
 a:focus {
-    color: lightgoldenrodyellow;
+    color: yellow;
 }
 a img:hover,
 a img:focus {
@@ -458,7 +458,7 @@ body {
 .wh-subtitle1 {
     font-size: larger;
     font-weight: bold;
-    color: yellow;
+    color: lightgoldenrodyellow;
     font-family: verdana;
 }
 
@@ -556,7 +556,7 @@ body {
 }
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-    color: lightgoldenrodyellow;
+    color: yellow;
 }
 
 
