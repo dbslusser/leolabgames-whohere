@@ -3,6 +3,10 @@
 
 <head>
     <meta charset="utf-8" />
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
     <!-- Social-feed css -->
     <link href="css/example.css" rel="stylesheet" type="text/css">
     <link href="css/jquery.socialfeed.css" rel="stylesheet" type="text/css">
@@ -12,13 +16,20 @@
 </head>
 
 <body>
-
-<section >
+here I am!
+<section>
     <div class="container">
-        <div class="social-feed-container">
+        <div class="row">
+            <div class="col-sm-6">
+                this is one column
+            </div>
+            <div class="col-sm-6">
+                <div class="social-feed-container"></div>
+            </div>
         </div>
     </div>
 </section>
+here I end!
 
 <!-- jQuery -->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -41,7 +52,7 @@
                 // FACEBOOK
                 facebook: {
                     accounts: queryTags,
-                    limit: 25,
+                    limit: 50,
                     access_token: '150849908413827|a20e87978f1ac491a0c4a721c961b68c'
                 },
                 // GOOGLEPLUS
@@ -53,7 +64,7 @@
                 // Twitter
                 twitter: {
                     accounts: queryTags,
-                    limit: 25,
+                    limit: 50,
                     consumer_key: 'qzRXgkI7enflNJH1lWFvujT2P', // make sure to have your app read-only
                     consumer_secret: '8e7E7gHuTwyDHw9lGQFO73FcUwz9YozT37lEvZulMq8FXaPl8O', // make sure to have your app read-only
                 },
@@ -66,8 +77,8 @@
                 // INSTAGRAM
                 instagram: {
                     accounts: queryTags,
-                    limit: 25,
-                    client_id: '88b4730e0e2c4b2f8a09a6184af2e218',
+                    limit: 50,
+                    user_id: '88b4730e0e2c4b2f8a09a6184af2e218',
                     access_token: ''
                 },
 
@@ -95,6 +106,10 @@
             updateFeed();
         });
 
+    });
+
+    $('#test').find('div').each(function(){
+        var innerDivId = $(this).attr('id');
     });
 </script>
 

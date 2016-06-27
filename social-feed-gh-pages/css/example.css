@@ -1,16 +1,16 @@
 body {
   padding: 0px;
   margin: 0px;
-  background-color: #ddd;
+  background-color: grey;
   line-height: 1.5em;
   color: #fff;
   text-align: center;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px; }
 
-.container {
-  display: inline-block;
-  width: 400px; }
+/*.container {*/
+  /*display: inline-flex;*/
+  /*width: 400px; }*/
 
 /*sections*/
 section, .intro, .stripe {
@@ -99,3 +99,4 @@ section.intro hr, .intro hr, .intro.stripe hr {
     list-style: none; }
 
 /*# sourceMappingURL=example.css.map */
+
