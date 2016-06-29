@@ -52,7 +52,7 @@
     <!-- Moment.js for showing "time ago" -->
     <script src="social-feed-gh-pages/bower_components/moment/min/moment.min.js"></script>
     <!-- Social-feed js -->
-<!--    <script src="social-feed-gh-pages/js/jquery.socialfeed.js"></script>-->
+    <script src="social-feed-gh-pages/js/jquery.socialfeed.js"></script>
     <script>
         $(document).ready(function() {
 
@@ -166,7 +166,7 @@
                     </div>
                 </div>
                 <div class="col-sm-7 social-column">
-<!--                    <div class="social-feed-container"></div>-->
+                    <div class="social-feed-container"></div>
                 </div>
             </div>
         </div>
@@ -228,6 +228,25 @@
                 </div>
             </div>
 
+        </div>
+    </div>
+
+    <!-- MODAL: results -->
+    <div class="modal fade" id="id_modalResults" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title wh-modal-title" id="id_modalResultsHeader">Submission Received</h4>
+                </div>
+                <div class="modal-body-scroll indent-1 wh-modal-body margin-top-20 margin-bottom-20" id="id_modalResultsBody" align="center">
+                    <img src="./media/images/thumbsUpEmoji.jpg" align="center" width="75%" height="75%">
+                    <br/>Thanks for sharing!
+                </div>
+                <div class="modal-footer">
+                    <button id="id_modalResultsClose" type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
     </div>
 
