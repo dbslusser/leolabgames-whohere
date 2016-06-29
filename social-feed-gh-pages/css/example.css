@@ -100,3 +100,21 @@ section.intro hr, .intro hr, .intro.stripe hr {
 
 /*# sourceMappingURL=example.css.map */
 
+
+.social-column {
+  overflow-y: scroll;
+  max-height: 750px;
+}
+
+li {
+  width: 50%;
+  min-height: 50%;
+  border: 1px solid #000;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  margin: 5px;
+  zoom: 1;
+  *display: inline;
+  _height: 250px;
+}

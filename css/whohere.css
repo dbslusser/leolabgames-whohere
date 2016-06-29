@@ -438,13 +438,13 @@ body {
 
 .wh-subtle {
     font-size: small;
-    color: dimgrey;
+    color: darkgrey;
     font-family: verdana;
 }
 .wh-subtle-2 {
     font-size: 8px;
     /*color: #888888;*/
-    color: dimgrey;
+    color: darkgray;
     font-family: verdana;
 }
 .wh-inline-title {
@@ -622,4 +622,23 @@ body {
     width: 300px;
  }
 
+
+/* social-feed*/
+.social-column {
+    overflow-y: scroll;
+    max-height: 750px;
+}
+
+/*li {*/
+    /*width: 50%;*/
+    /*min-height: 50%;*/
+    /*border: 1px solid #000;*/
+    /*display: -moz-inline-stack;*/
+    /*display: inline-block;*/
+    /*vertical-align: top;*/
+    /*margin: 5px;*/
+    /*zoom: 1;*/
+    /**display: inline;*/
+    /*_height: 250px;*/
+/*}*/
 
