@@ -62,15 +62,15 @@
                 var queryTags = initialQuery.split(",");
                 $('.social-feed-container').socialfeed({
                     // FACEBOOK
-//                    facebook: {
-//                        accounts: queryTags,
-//                        limit: 50,
-//                        access_token: '150849908413827|a20e87978f1ac491a0c4a721c961b68c'
-//                    },
+                    facebook: {
+                        accounts: queryTags,
+                        limit: 50,
+                        access_token: '150849908413827|a20e87978f1ac491a0c4a721c961b68c'
+                    },
                     // GOOGLEPLUS
                     google: {
                         accounts: queryTags,
-                        limit: 2,
+                        limit: 50,
                         access_token: 'AIzaSyDAelFmJhg6BSUbSLe8UT7s-G53tL4_KRg'
                     },
                     // Twitter

@@ -673,7 +673,7 @@ body {
 
 .flex-item {
     /*height: 150px;*/
-    /*width: 350px;*/
+    width: 300px;
     margin: 10px;
     color: black;
     border-color: grey;
