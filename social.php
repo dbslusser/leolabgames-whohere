@@ -62,11 +62,11 @@
                 var queryTags = initialQuery.split(",");
                 $('.social-feed-container').socialfeed({
                     // FACEBOOK
-                    facebook: {
-                        accounts: queryTags,
-                        limit: 50,
-                        access_token: '150849908413827|a20e87978f1ac491a0c4a721c961b68c'
-                    },
+//                    facebook: {
+//                        accounts: queryTags,
+//                        limit: 50,
+//                        access_token: '150849908413827|a20e87978f1ac491a0c4a721c961b68c'
+//                    },
                     // GOOGLEPLUS
                     google: {
                         accounts: queryTags,
@@ -90,8 +90,9 @@
                     instagram: {
                         accounts: queryTags,
                         limit: 50,
-                        user_id: '88b4730e0e2c4b2f8a09a6184af2e218',
-                        access_token: ''
+                        client_id: 'aaddb80fdc0e4f398498ae46e15ca98c',
+                        access_token: '77f8b56402c14c9e89245dd79b19ae59'
+//                        access_token: '3271638171.1677ed0.edaa2aae507b4886b065138b35dec458'
                     },
 
                     // GENERAL SETTINGS
@@ -129,49 +130,48 @@
 
 <?php include("card_submit.php"); ?>
 
-<body class="background1">
 
+<body class="background1">
     <!-- Page Navigation -->
     <div id="id_navigation"></div>
 
-    <section>
-        <div class="container">
-            <div class="row social-row">
-                <div class="col-sm-5" align="left">
-                    <div class="row">
-                        <img src="media/images/frontTitle-01.png" height="50" width="auto"><br>
-                        Wants to be in the know?<br>
-                        Join the WhoHere? mail list!
-                    </div>
-                    <div class="row"><br><br></div>
-                    <div class="row">
-                        <img src="media/images/frontTitle-01.png" height="50" width="auto"><br>
-                        Shares the most?<br>
-                        #WhoHere and share yours!
-                    </div>
-                    <div class="row"><br><br></div>
-                    <div class="row">
-                        <img src="media/images/frontTitle-01.png" height="50" width="auto"><br>
-                        Likes cool content?<br>
-                        Follow us! @WhereHereGames&nbsp;
-                        <a href="https://www.instagram.com/whoheregames/" target="_blank" title="#whhoere" class="hvr-float-shadow"><i class="fa fa-instagram" aria-hidden="true"></i></a>&nbsp;
-                        <a href="https://www.facebook.com/whoheregames" target="_blank" title="#whohere" class="hvr-float-shadow"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>&nbsp;
-                        <a href="https://twitter.com/whoheregames" target="_blank" title="#whohere" class="hvr-float-shadow"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-                    </div>
-                    <div class="row"><br><br></div>
-                    <div class="row">
-                        <img src="media/images/frontTitle-01.png" height="50" width="auto"><br>
-                        Makes the best WhoHere cards?<br>
-                        <a href="" data-toggle="modal" data-target="#submitCardModal">Put yours to the test & submit it here!</a>
-                    </div>
-                </div>
-                <div class="col-sm-7 social-column">
-                    <div class="social-feed-container"></div>
-                </div>
+    <!-- Main Content -->
+    <div class="container margin-bottom-40">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2 class="wh-title-01">Who Here...</h2>
+                Wants to be in the know?<br>Join the WhoHere? mail list!
+            </div>
+            <div class="col-sm-6">
+                <h2 class="wh-title-01">Who Here...</h2>
+                Shares the most?<br>#WhoHere and share your moments :)
             </div>
         </div>
+        <br/>
+        <div class="row">
+            <div class="col-sm-6">
+                <h2 class="wh-title-01">Who Here...</h2>
+                Likes cool content?<br>Follow us! @WhereHereGames&nbsp;
+                <a href="https://www.instagram.com/whoheregames/" target="_blank" title="#whhoere" class="hvr-float-shadow"><i class="fa fa-instagram" aria-hidden="true"></i></a>&nbsp;
+                <a href="https://www.facebook.com/whoheregames" target="_blank" title="#whohere" class="hvr-float-shadow"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>&nbsp;
+                <a href="https://twitter.com/whoheregames" target="_blank" title="#whohere" class="hvr-float-shadow"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+            </div>
+            <div class="col-sm-6">
+                <h2 class="wh-title-01">Who Here...</h2>
+                Makes the best WhoHere cards?<br>
+                <a href="" data-toggle="modal" data-target="#submitCardModal">Submit yours here!</a>
+            </div>
+        </div>
+    </div>
 
-    </section>
+    <!-- social feed -->
+    <div class="wh-article-wrapper">
+        <article>
+            <ul class="social-feed-container flex-container wrap"></ul>
+        </article>
+    </div>
+
+
 
 
     <!-- Card submit modal -->

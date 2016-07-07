@@ -2,6 +2,26 @@
 .social-feed-element.hidden{
     background-color:red !important;
 }
+
+.social-feed-element{
+    /*box-shadow: 0 0 50px 0 lightgrey;*/
+    transition: 0.5s;
+    -webkit-backface-visibility: hidden;
+    /*margin:-1px;*/
+    margin-top:25px;
+    background-color: #fff;
+    color: #333;
+    text-align:left;
+    font-size: 14px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 16px;
+    width: 25%;
+    /*height: %;*/
+    border-color: #00b3ee;
+}
+
+
+
 .social-feed-element .pull-left{
     float:left;
     margin-right: 10px;
@@ -10,8 +30,8 @@
     margin-left: 10px;
 }
 .social-feed-element img {
-    width: 100%;
-    width: auto\9;
+    width: 75%;
+    /*width: auto\9;*/
     height: auto;
     border: 0;  
     vertical-align: middle;
@@ -104,22 +124,6 @@
     color: #808080;
 }
 
-.social-feed-element{
-    /*box-shadow: 0 0 50px 0 lightgrey;*/
-    transition: 0.5s;
-    -webkit-backface-visibility: hidden;
-    margin:-1px;
-    margin-top:25px;
-    background-color: #fff;
-    color: #333;
-    text-align:left;
-    font-size: 14px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 16px;
-    /*width: 10%;*/
-    /*height: 10%;*/
-    border-color: #00b3ee;
-}
 .social-feed-element:hover{
     box-shadow: 0 0 20px 0 yellow;
 }
