@@ -140,7 +140,7 @@
         <div class="row">
             <div class="col-sm-6">
                 <h2 class="wh-title-01">Who Here...</h2>
-                Wants to be in the know?<br>Join the WhoHere? mail list!
+                Wants to be in the know?<br><a href="" class="wh-subtitle1">Join the WhoHere? mail list!</a>
             </div>
             <div class="col-sm-6">
                 <h2 class="wh-title-01">Who Here...</h2>
@@ -159,7 +159,7 @@
             <div class="col-sm-6">
                 <h2 class="wh-title-01">Who Here...</h2>
                 Makes the best WhoHere cards?<br>
-                <a href="" data-toggle="modal" data-target="#submitCardModal">Submit yours here!</a>
+                <a href="" data-toggle="modal" data-target="#submitCardModal" class="wh-subtitle1">Submit yours here!</a>
             </div>
         </div>
     </div>
