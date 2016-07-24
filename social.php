@@ -129,7 +129,7 @@
 </head>
 
 <?php include("card_submit.php"); ?>
-
+<?php include("email_submit.php"); ?>
 
 <body class="background1">
     <!-- Page Navigation -->
@@ -140,7 +140,7 @@
         <div class="row">
             <div class="col-sm-6">
                 <h2 class="wh-title-01">Who Here...</h2>
-                Wants to be in the know?<br><a href="" class="wh-subtitle1">Join the WhoHere? mail list!</a>
+                Wants to be in the know?<br><a href="" data-toggle="modal" data-target="#submitEmailModal"  class="wh-subtitle1">Join the WhoHere? mail list!</a>
             </div>
             <div class="col-sm-6">
                 <h2 class="wh-title-01">Who Here...</h2>
@@ -231,6 +231,56 @@
         </div>
     </div>
 
+
+    <!-- MODAL: email list -->
+    <div class="modal fade" id="submitEmailModal" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header background1">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h2 class="modal-title"><b>Submit your card!</b></h2>
+                </div>
+                <div class="modal-body background1">
+                    <div class="row">
+                        <div class="Absolute-Center is-Responsive">
+                            <div id="logo-container"></div>
+                            <div class="col-sm-10 col-md-8 col-md-offset-2">
+                                <br>
+                                <form method='post' id="id_emailForm">
+                                    <div class="form-group input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                        <input class="form-control wh-form-element" type='email' name='email' id='email' placeholder="your email" required="true"/>
+                                    </div>
+                                    <div class="form-group input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input class="form-control wh-form-element" type='text' name='user' id='user' placeholder="your name" required="true"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <br/>
+                                        <button type="submit" value="submit" class="btn btn-default btn-block wh-form-element">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="wh-subtle margin-top-40"><br>
+                        ** email is for updates regarding WhoHere Games only. We will never spam you.
+                    </p>
+                </div>
+                <div class="modal-footer background1">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
     <!-- MODAL: results -->
     <div class="modal fade" id="id_modalResults" tabindex="-1" role="dialog">
         <div class="modal-dialog modal-md">
@@ -249,6 +299,10 @@
             </div>
         </div>
     </div>
+
+
+
+
 
 
     <!-- footer -->
