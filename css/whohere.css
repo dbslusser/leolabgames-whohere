@@ -434,7 +434,10 @@ body {
 .dotted {border-style: dotted;}
 
 
-
+.wh-title-01 {
+    color: yellow;
+    font-family: verdana;
+}
 
 .wh-subtle {
     font-size: small;
@@ -623,22 +626,82 @@ body {
  }
 
 
+
 /* social-feed*/
-.social-column {
+.wh-social-container {
     overflow-y: scroll;
     max-height: 750px;
 }
 
-/*li {*/
-    /*width: 50%;*/
-    /*min-height: 50%;*/
-    /*border: 1px solid #000;*/
-    /*display: -moz-inline-stack;*/
-    /*display: inline-block;*/
-    /*vertical-align: top;*/
-    /*margin: 5px;*/
-    /*zoom: 1;*/
-    /**display: inline;*/
-    /*_height: 250px;*/
-/*}*/
+.flex-container {
+    padding: 10px;
+    align-content: center;
+    list-style: none;
+    /*border: 2px solid silver;*/
+    /*background-color: whitesmoke;*/
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nowrap  {
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+
+.wrap    {
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.wrap li {
+    background: none;
+}
+
+.wrap-reverse         {
+    -webkit-flex-wrap: wrap-reverse;
+    flex-wrap: wrap-reverse;
+}
+.wrap-reverse li {
+    background: deepskyblue;
+}
+
+.flex-item {
+    /*height: 150px;*/
+    width: 300px;
+    margin: 10px;
+    color: black;
+    border-color: grey;
+    background-color: white;
+}
+
+
+.wh-flex-item {
+    height: 150px;
+    width: 350px;
+    margin: 10px;
+    color: darkgrey;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+
+.wh-article-wrapper {
+    height: 50vh;
+    display: flex;
+}
+
+article {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 2em;
+    flex: 2;
+    /*height: 50vh;*/
+    /*display: flex;*/
+}
 

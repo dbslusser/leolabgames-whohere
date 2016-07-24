@@ -12,7 +12,7 @@ if (typeof Object.create !== 'function') {
 
         var defaults = {
             plugin_folder: '', // a folder in which the plugin is located (with a slash in the end)
-            template: 'feed-template.html', // a path to the template file
+            template: 'template.html', // a path to the template file
             show_media: false, // show images of attachments if available
             media_min_width: 300,
             length: 500, // maximum length of post message shown
@@ -49,9 +49,9 @@ if (typeof Object.create !== 'function') {
         function fireCallback() {
             var fire = true;
             /*$.each(Object.keys(loaded), function() {
-                if (loaded[this] > 0)
-                    fire = false;
-            });*/
+             if (loaded[this] > 0)
+             fire = false;
+             });*/
             if (fire && options.callback) {
                 options.callback();
             }
@@ -134,8 +134,8 @@ if (typeof Object.create !== 'function') {
                     $(container).append(rendered_html);
                     if (insert_index >= 0) {
                         insert_index++;
-                        var before = $(container).children('div:nth-child(' + insert_index + ')'),
-                            current = $(container).children('div:last-child');
+                        var before = $(container).children('li:nth-child(' + insert_index + ')'),
+                            current = $(container).children('li:last-child');
                         $(current).insertBefore(before);
                     }
 
@@ -267,7 +267,7 @@ if (typeof Object.create !== 'function') {
                     unifyPostData: function(element) {
                         var post = {};
                         if (element.id) {
-                            post.id = element.id;
+                            post.id = element.id_str;
                             //prevent a moment.js console warning due to Twitter's poor date format.
                             post.dt_create = moment(new Date(element.created_at));
                             post.author_link = 'http://twitter.com/' + element.user.screen_name;
@@ -300,7 +300,7 @@ if (typeof Object.create !== 'function') {
                         Utility.request(request_url, Feed.facebook.utility.getPosts);
                     };
                     var fields = '?fields=id,from,name,message,created_time,story,description,link';
-                       fields += (options.show_media === true)?',picture,object_id':'';
+                    fields += (options.show_media === true)?',picture,object_id':'';
                     var request_url, limit = '&limit=' + options.facebook.limit,
                         query_extention = '&access_token=' + options.facebook.access_token + '&callback=?';
                     switch (account[0]) {
@@ -671,9 +671,9 @@ if (typeof Object.create !== 'function') {
 
                 getData: function(account) {
                     var request_url,
-                      limit = 'limit=' + options.pinterest.limit,
-                      fields = 'fields=id,created_at,link,note,creator(url,first_name,last_name,image),image',
-                      query_extention = fields + '&access_token=' + options.pinterest.access_token + '&' + limit + '&callback=?';
+                        limit = 'limit=' + options.pinterest.limit,
+                        fields = 'fields=id,created_at,link,note,creator(url,first_name,last_name,image),image',
+                        query_extention = fields + '&access_token=' + options.pinterest.access_token + '&' + limit + '&callback=?';
                     switch (account[0]) {
                         case '@':
                             var username = account.substr(1);
@@ -723,8 +723,8 @@ if (typeof Object.create !== 'function') {
 
                 getData: function(url) {
                     var limit = options.rss.limit,
-                      yql = encodeURIComponent('select entry FROM feednormalizer where url=\'' + url + '\' AND output=\'atom_1.0\' | truncate(count=' + limit + ')' ),
-                      request_url = Feed.rss.api + yql + '&format=json&callback=?';
+                        yql = encodeURIComponent('select entry FROM feednormalizer where url=\'' + url + '\' AND output=\'atom_1.0\' | truncate(count=' + limit + ')' ),
+                        request_url = Feed.rss.api + yql + '&format=json&callback=?';
 
                     Utility.request(request_url, Feed.rss.utility.getPosts, Feed.rss.datatype);
                 },
