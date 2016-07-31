@@ -81,7 +81,8 @@ hr.small {
     left: 0;
     width: 100%;
     z-index: 3;
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /*font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+    font-family: Verdana;
 }
 .navbar-custom .navbar-brand {
     font-weight: 800;
@@ -438,6 +439,11 @@ body {
     color: yellow;
     font-family: verdana;
 }
+.wh-title-center{
+    text-align: center;
+    font-family: Verdana;
+    font-size: 20;
+}
 
 .wh-subtle {
     font-size: small;
@@ -460,7 +466,7 @@ body {
 
 .wh-subtitle1 {
     font-size: larger;
-    font-weight: bold;
+    /*font-weight: bold;*/
     color: lightgoldenrodyellow;
     font-family: verdana;
 }
@@ -705,3 +711,11 @@ article {
     /*display: flex;*/
 }
 
+.golendrod {
+    color: lightgoldenrodyellow;
+    font-weight: bold;
+}
+
+.text-center {
+    text-align: center;
+}

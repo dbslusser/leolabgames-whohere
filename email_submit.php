@@ -16,8 +16,8 @@ if( $_POST )
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $users_email = mysqli_real_escape_string($con, trim($_POST['email']));
-    $users_user = mysqli_real_escape_string($con, trim($_POST['user']));
+    $users_email = mysqli_real_escape_string($con, trim($_POST['ml_email']));
+    $users_user = mysqli_real_escape_string($con, trim($_POST['ml_user']));
 
     $query = "INSERT INTO `$dbname`.`$table` (`id`, `email`, `user`, `timestamp`)
         VALUES (NULL, '$users_email', '$users_user', CURRENT_TIMESTAMP);";

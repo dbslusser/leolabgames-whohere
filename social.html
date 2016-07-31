@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>WhoHere</title>
+    <link rel="shortcut icon" type="image/x-icon" href="media/images/question-01.png" />
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link href="css/whohere.css" rel="stylesheet">
+
+    <!-- animate.css: http://daneden.github.io/animate.css/ -->
+    <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
+
+
+    <script type="text/javascript">
+        $(document).ready(function(e) {
+            $('#id_navigation').load('navbar.htm');
+            $('#id_footer').load('footer.htm');
+        });
+    </script>
+
+
+    <!-- Codebird.js - required for TWITTER -->
+    <script src="social-feed-gh-pages/bower_components/codebird-js/codebird.js"></script>
+    <!-- doT.js for rendering templates -->
+    <script src="social-feed-gh-pages/bower_components/doT/doT.min.js"></script>
+    <!-- Moment.js for showing "time ago" -->
+    <script src="social-feed-gh-pages/bower_components/moment/min/moment.min.js"></script>
+    <!-- Social-feed js -->
+    <script src="social-feed-gh-pages/js/jquery.socialfeed.js"></script>
+    <!-- Social-feed css -->
+    <link href="social-feed-gh-pages/css/jquery.socialfeed.css" rel="stylesheet" type="text/css">
+
+
+    <script>
+        $(document).ready(function() {
+
+            var updateFeed = function() {
+                var initialQuery = "@whoheregames, #whohere" //$('#query').val();
+                initialQuery = initialQuery.replace(" ", "");
+                var queryTags = initialQuery.split(",");
+                $('.social-feed-container').socialfeed({
+                    // FACEBOOK
+                    facebook: {
+                        accounts: queryTags,
+                        limit: 50,
+                        access_token: '150849908413827|a20e87978f1ac491a0c4a721c961b68c'
+                    },
+                    // GOOGLEPLUS
+                    google: {
+                        accounts: queryTags,
+                        limit: 50,
+                        access_token: 'AIzaSyDAelFmJhg6BSUbSLe8UT7s-G53tL4_KRg'
+                    },
+                    // Twitter
+                    twitter: {
+                        accounts: queryTags,
+                        limit: 50,
+                        consumer_key: 'qzRXgkI7enflNJH1lWFvujT2P', // make sure to have your app read-only
+                        consumer_secret: '8e7E7gHuTwyDHw9lGQFO73FcUwz9YozT37lEvZulMq8FXaPl8O', // make sure to have your app read-only
+                    },
+                    // VKONTAKTE
+//                vk: {
+//                    accounts: queryTags,
+//                    limit: 2,
+//                    source: 'all'
+//                },
+                    // INSTAGRAM
+                    instagram: {
+                        accounts: queryTags,
+                        limit: 50,
+                        client_id: 'aaddb80fdc0e4f398498ae46e15ca98c',
+                        access_token: '77f8b56402c14c9e89245dd79b19ae59'
+//                        access_token: '3271638171.1677ed0.edaa2aae507b4886b065138b35dec458'
+                    },
+
+                    // GENERAL SETTINGS
+                    length: 200,
+                    show_media: true,
+                    // Moderation function - if returns false, template will have class hidden
+                    moderation: function(content) {
+                        return (content.text) ? content.text.indexOf('fuck') == -1 : true;
+                    },
+                    //update_period: 5000,
+                    // When all the posts are collected and displayed - this function is evoked
+                    callback: function() {
+                        console.log('all posts are collected');
+                    }
+                });
+            };
+
+            updateFeed();
+            $('#button-update').click(function() {
+                //first, get rid of old data/posts.
+                $('.social-feed-container').html('');
+
+                //then load new posts
+                updateFeed();
+            });
+
+        });
+
+        $('#test').find('div').each(function(){
+            var innerDivId = $(this).attr('id');
+        });
+    </script>
+
+</head>
+
+
+<body class="background1">
+    <!-- Page Navigation -->
+    <div id="id_navigation"></div>
+
+
+    <!-- Main Content -->
+    <div class="container margin-bottom-20">
+        <div class="row">
+            <h2 class="wh-title-center margin-bottom-20"><span class="golendrod">We're social!</span> #WhoHere to share your epic moments!</h2>
+        </div>
+        <!--<div class="row text-center margin-bottom-20">-->
+            <!--<span class="golendrod">Have an awsome card idea?</span> Submit it here!-->
+        <!--</div>-->
+        <!--<div class="row text-center">-->
+            <!--<span class="golendrod">Stay in the know</span> Join our email list to get all the latest updates<br/>-->
+        <!--</div>-->
+    </div>
+
+
+    <!-- social feed -->
+    <div class="wh-article-wrapper">
+        <article>
+            <ul class="social-feed-container flex-container wrap"></ul>
+        </article>
+    </div>
+
+
+    <!-- footer -->
+    <div id="id_footer"></div>
+
+</body>
+</html>

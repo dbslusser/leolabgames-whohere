@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -248,14 +248,14 @@
                             <div id="logo-container"></div>
                             <div class="col-sm-10 col-md-8 col-md-offset-2">
                                 <br>
-                                <form method='post' id="id_emailForm">
+                                <form action='social.php' method='post' id="id_emailForm">
                                     <div class="form-group input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                        <input class="form-control wh-form-element" type='email' name='email' id='email' placeholder="your email" required="true"/>
+                                        <input class="form-control wh-form-element" type='email' name='ml_email' id='ml_email' placeholder="your email" required="true"/>
                                     </div>
                                     <div class="form-group input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                        <input class="form-control wh-form-element" type='text' name='user' id='user' placeholder="your name" required="true"/>
+                                        <input class="form-control wh-form-element" type='text' name='ml_user' id='ml_user' placeholder="your name" required="true"/>
                                     </div>
                                     <div class="form-group">
                                         <br/>
